@@ -4,7 +4,8 @@ import { useContext } from "react";
 import { historyContext } from "../App";
 
 export default function SearchHistory(props) {
-  const [allDetails, setAllDetails] = useContext(historyContext);
+  const { allDetails, setAllDetails } = useContext(historyContext);
+  const { getWeatherInformation } = useContext(historyContext);
 
   /**Deletes specific record in history array */
   const deleteRecord = (index) => {
@@ -19,7 +20,7 @@ export default function SearchHistory(props) {
 
   /** set current  details to specific information in history*/
   const setCurrent = () => {
-    setAllDetails({ ...allDetails, current: props.countryInfo });
+    getWeatherInformation(props.countryInfo.location);
   };
 
   return (

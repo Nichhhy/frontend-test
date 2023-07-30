@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import SearchImg from "../Images/search.png";
+import { historyContext } from "../App";
 
 export default function SearchBar(props) {
   const [country, setCountry] = useState("");
+
+  const { getWeatherInformation } = useContext(historyContext);
 
   const handleChange = (e) => {
     setCountry(e.target.value);
@@ -29,7 +32,7 @@ export default function SearchBar(props) {
           alt="searchButtonImg"
           className="p-[8px] md:p-[13px]"
           onClick={() => {
-            props.getWeatherInformation(country);
+            getWeatherInformation(country);
 
             setCountry("");
           }}

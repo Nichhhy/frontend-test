@@ -70,8 +70,10 @@ function App() {
       {/**Main wetaher container */}
       <div className="px-[18px] pt-[18px] max-w-[700px] flex-auto  flex flex-col w-full h-full ">
         {/**Search Container and search button */}
-        <historyContext.Provider value={[allDetails, setAllDetails]}>
-          <SearchBar getWeatherInformation={getWeatherInformation} />
+        <historyContext.Provider
+          value={{ allDetails, setAllDetails, getWeatherInformation }}
+        >
+          <SearchBar />
           <WeatherSummary />
         </historyContext.Provider>
       </div>

@@ -3,8 +3,8 @@ import LightImage from "../Images/sun.png";
 import SearchHistory from "./SearchHistory";
 import { historyContext } from "../App";
 
-export default function WeatherSummary() {
-  const [allDetails, setAllDetails] = useContext(historyContext);
+export default function WeatherSummary(props) {
+  const { allDetails, setAllDetails } = useContext(historyContext);
 
   return (
     <div className="grid grid-rows-[150px / auto auto auto] flex-auto grid-cols-2   ">
@@ -55,6 +55,7 @@ export default function WeatherSummary() {
                       key={index}
                       index={index}
                       countryInfo={allDetails.history[index]}
+                      getWeatherInformation={props.getWeatherInformation}
                     />
                   );
                 })
