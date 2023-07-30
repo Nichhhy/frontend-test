@@ -1,4 +1,3 @@
-# Fontend Test
 
 ## Technologies Used
 ReactJS
@@ -30,3 +29,9 @@ API Key is stored in .env file and not uploaded to github
 
   Depending on how I would want to display search history, I would change how I stored my history searches. currently implemented
   is appending to end of array, If I would want to have it added to the start of the array I would use unshift.
+<img width="834" alt="Screenshot 2023-07-30 at 3 49 16 PM" src="https://github.com/Nichhhy/frontend-test/assets/104340791/455dae9b-df0c-4ba9-8fc0-eb4801a74fa0">
+
+<img width="372" alt="Screenshot 2023-07-30 at 3 49 07 PM" src="https://github.com/Nichhhy/frontend-test/assets/104340791/d459aa3f-d10c-4e11-941c-53b3e9f5ea09">
+
+
+
